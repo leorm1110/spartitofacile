@@ -5,6 +5,7 @@ import pypandoc
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+CORS(app)
 
 # Estensioni supportate
 ALLOWED_EXTENSIONS = {'txt', 'md', 'csv', 'docx', 'rtf'}
