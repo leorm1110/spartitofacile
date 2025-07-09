@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 import tempfile
 import pypandoc
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # Abilita CORS per tutte le rotte
 
 # Estensioni supportate
 ALLOWED_EXTENSIONS = {'txt', 'md', 'csv', 'docx', 'rtf'}
